@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.netsecassign3.CHAPController">
+   <children>
+      <ImageView fitHeight="154.0" fitWidth="148.0" layoutX="58.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/images.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="132.0" fitWidth="148.0" layoutX="405.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/images.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="112.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node A" />
+      <Text layoutX="459.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Node B" />
+      <Button fx:id="NodeAButton" layoutX="93.0" layoutY="166.0" mnemonicParsing="false" onAction="#requestFunc" prefHeight="22.0" prefWidth="79.0" style="-fx-wrap-text: true; -fx-background-color: BLACK;" text="REQUEST" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow height="35.74" radius="19.582500000000003" width="44.59">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="70.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Challenge-Handshake Authentication Protocol (CHAP)">
+         <font>
+            <Font name="Kefa Regular" size="19.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="aArea" layoutX="64.0" layoutY="221.0" prefHeight="125.0" prefWidth="138.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="bArea" editable="false" layoutX="410.0" layoutY="221.0" prefHeight="125.0" prefWidth="138.0">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="NodeBButton" layoutX="440.0" layoutY="166.0" mnemonicParsing="false" onAction="#sendAction" prefHeight="22.0" prefWidth="79.0" style="-fx-wrap-text: true; -fx-background-color: BLACK;" text="SEND" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow height="35.74" radius="19.582500000000003" width="44.59">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="label" alignment="CENTER" layoutX="191.0" layoutY="144.0" prefHeight="68.0" prefWidth="231.0" style="-fx-wrap-text: true;" text="Click Request to initiate the CHAP" textAlignment="CENTER" />
+      <Button layoutX="273.0" layoutY="356.0" mnemonicParsing="false" onAction="#reset" prefHeight="23.0" prefWidth="62.0" style="-fx-wrap-text: true; -fx-background-color: black;" text="RESET" textFill="#b2eedf">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow choke="0.61" height="26.53" radius="17.555" width="45.69" />
+   </effect>
+</AnchorPane>
